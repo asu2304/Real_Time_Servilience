@@ -44,6 +44,7 @@ while True:
                 cvzone.cornerRect(frame, (x1,y1,width, height))
 
 
+
     
     cv2.imshow('Webcam', frame)
     cv2.waitKey(1)
