@@ -31,6 +31,7 @@ model = YOLO('Yolo-Weights/yolov8l.pt')
 # cv2.waitKey(0)
 
 while True:
+    
     success, img = cap.read()
     img = cv2.flip(img, 1)
     results = model(img, stream = True)
@@ -57,7 +58,6 @@ while True:
 
             cvzone.putTextRect(img, f"{class_name}:{confidence}", (max(0, x1), max(35, y1)), scale = 0.9, thickness = 1)
     
-            
     cv2.imshow("Image", img)
     cv2.waitKey(1)
     
